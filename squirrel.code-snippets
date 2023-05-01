@@ -25,6 +25,11 @@
         "prefix": "TargetType",
         "body": "TargetType.${1|Invalid,Self,Attacker,AimPosition,VehicleDriver,VehiclePassenger,VehiclePassenger2,VehiclePassenger3,VehiclePassenger4,VehicleRoleSwapTemp,VehicleCargo1,VehicleCargo2,VehicleCargo3,VehiclePassengerTrunk,ClosestPed,CoverObject,CoverPopout,Equipped,EquippedLeftHand,EquippedHat,EquippedGlasses,Facing,Focus,Grapple,LookAt,PoiLookAt,PoiUse,PoiParentObject,Vehicle,AIObjective,ToFollow,Player,ScriptedMarker,StimulusProducer,ConditionStimulusProducer,IgnoreAvoidance,LastThreat,PointAt,Attacking,Conversation,InteractiveProp,PickupItem,StowedWeapon,Stowed2HWeapon,VehicleActionHijack,VehicleActionHijackPotential,VehicleClosestPoint,ClosestDownedPed,Directional,Physical,Social,CrowdPushPrimary,CrowdPushSecondary,Escort,Owner,LastCreatedObject,SubTarget,Transit,WorldEditorSelectedObject,CraneContainerAttached,CraneContainerUnattached,MySpawnPoint,GroupLeader,GroupMember,GroupMember2,GroupMember3,GroupMember4,GroupMemberPaired,BestInteractionPoint,InteractionPoint0,InteractionPoint1,InteractionPoint2,InteractionPoint3,InteractionPoint4,InteractionPoint5,HijackableVehicle,Sync,BestMeleeAttacker,LastAttacked,InteractionOffset,Transaction,LastGrapple,ProbeLowL,ProbeLowC,ProbeLowR,ProbeMidL,ProbeMidC,ProbeMidR,ProbeHighL,ProbeHighC,ProbeHighR|}$0"
     },
+    "SimObjectType":
+    {
+        "prefix": "SimObjectType",
+        "body": "SimObjectType.${1|IAIPathMarker,AIJumpPoint,AIOutlineRegion,AISeedPoint,AudioEmitterMarker,AudioTriggerRegion,BoostRegion,Camera,CameraMarker,Character,Collectible,CombatRegion,CopRoadBlock,Director,Door,DynamicLight,FleeToPoint,FXSimComponent,HidingSpot,HijackReturn,InterestPoint,IrradianceVolume,Marker,MarkerProgressionTrigger,MarkerRaceStartingGrid,MeleeScriptSystem,ModelAsset,NISScriptSystem,ParkingSpot,Prefab,Prop,ReinforcementPoint,TrafficRegion,TriggerRegion,Turf,Vehicle,Weapon,WeaponSpawner,StartRegion,SpawnPoint,SpawnPointProgressionTrigger,SpawnRegion|}$0"
+    },
 
     // Color
     "Color()":
@@ -42,42 +47,42 @@
     "Vector2.Add()":
     {
         "prefix": [ "Vector2.Add", "Add" ],
-        "body": ".Add(Vector2(${x}, ${y}))$0"
+        "body": "Add(Vector2(${x}, ${y}))$0"
     },
     "Vector2.Subtract()":
     {
         "prefix": [ "Vector2.Subtract", "Subtract" ],
-        "body": ".Subtract(Vector2(${x}, ${y}))$0"
+        "body": "Subtract(Vector2(${x}, ${y}))$0"
     },
     "Vector2.Multiply()":
     {
         "prefix": [ "Vector2.Multiply", "Multiply" ],
-        "body": ".Multiply(${value})$0"
+        "body": "Multiply(${value})$0"
     },
     "Vector2.Divide()":
     {
         "prefix": [ "Vector2.Divide", "Divide" ],
-        "body": ".Divide(${value})$0"
+        "body": "Divide(${value})$0"
     },
     "Vector2.Equals(): boolean":
     {
         "prefix": [ "Vector2.Equals", "Equals" ],
-        "body": ".Equals(Vector2(${x}, ${y}))$0"
+        "body": "Equals(Vector2(${x}, ${y}))$0"
     },
     "Vector2.Length(): float":
     {
         "prefix": [ "Vector2.Length", "Length" ],
-        "body": ".Length()$0"
+        "body": "Length()$0"
     },
     "Vector2.Normalize()":
     {
         "prefix": [ "Vector2.Normalize", "Normalize" ],
-        "body": ".Normalize()$0"
+        "body": "Normalize()$0"
     },
     "Vector2.DistTo(): float":
     {
         "prefix": [ "Vector2.DistTo", "DistTo" ],
-        "body": ".DistTo(Vector2(${x}, ${y}))$0"
+        "body": "DistTo(Vector2(${x}, ${y}))$0"
     },
 
     // Vector3
@@ -89,42 +94,42 @@
     "Vector3.Add()":
     {
         "prefix": [ "Vector3.Add", "Add" ],
-        "body": ".Add(Vector3(${x}, ${y}, ${z}))$0"
+        "body": "Add(Vector3(${x}, ${y}, ${z}))$0"
     },
     "Vector3.Subtract()":
     {
         "prefix": [ "Vector3.Subtract", "Subtract" ],
-        "body": ".Subtract(Vector3(${x}, ${y}, ${z}))$0"
+        "body": "Subtract(Vector3(${x}, ${y}, ${z}))$0"
     },
     "Vector3.Multiply()":
     {
         "prefix": [ "Vector3.Multiply", "Multiply" ],
-        "body": ".Multiply(${value})$0"
+        "body": "Multiply(${value})$0"
     },
     "Vector3.Divide()":
     {
         "prefix": [ "Vector3.Divide", "Divide" ],
-        "body": ".Divide(${value})$0"
+        "body": "Divide(${value})$0"
     },
     "Vector3.Equals(): boolean":
     {
         "prefix": [ "Vector3.Equals", "Equals" ],
-        "body": ".Equals(Vector3(${x}, ${y}, ${z}))$0"
+        "body": "Equals(Vector3(${x}, ${y}, ${z}))$0"
     },
     "Vector3.Length(): float":
     {
         "prefix": [ "Vector3.Length", "Length" ],
-        "body": ".Length()$0"
+        "body": "Length()$0"
     },
     "Vector3.Normalize()":
     {
         "prefix": [ "Vector3.Normalize", "Normalize" ],
-        "body": ".Normalize()$0"
+        "body": "Normalize()$0"
     },
     "Vector3.DistTo(): float":
     {
         "prefix": [ "Vector3.DistTo", "DistTo" ],
-        "body": ".DistTo(Vector3(${x}, ${y}, ${z}))$0"
+        "body": "DistTo(Vector3(${x}, ${y}, ${z}))$0"
     },
 
     // Console
@@ -168,7 +173,7 @@
     "Font.size: float":
     {
         "prefix": [ "Font.size", "size" ],
-        "body": "size"
+        "body": "size$0"
     },
 
     // Hash
@@ -185,7 +190,7 @@
     "Hash.value: hexadecimal":
     {
         "prefix": [ "Hash.value", "value" ],
-        "body": "value"
+        "body": "value$0"
     },
 
     // Image
@@ -202,7 +207,7 @@
     "Image.size: Vector2":
     {
         "prefix": [ "Image.size", "size" ],
-        "body": "size"
+        "body": "size$0"
     },
 
     // Renderer
@@ -271,7 +276,7 @@
     "Timer.remaining: float":
     {
         "prefix": [ "Timer.remaining", "remaining" ],
-        "body": "remaining"
+        "body": "remaining$0"
     },
 
     // Audio
@@ -312,6 +317,16 @@
         "prefix": [ "SimObject.Suspend", "Suspend" ],
         "body": "Suspend()$0"
     },
+    "SimObject.GetName: Hash":
+    {
+        "prefix": [ "SimObject.GetName", "GetName" ],
+        "body": "GetName()$0"
+    },
+    "SimObject.GetType: SimObjectType":
+    {
+        "prefix": [ "SimObject.GetType", "GetType" ],
+        "body": "GetType()$0"
+    },
     "SimObject.GetPosition(): Vector3":
     {
         "prefix": [ "SimObject.GetPosition", "GetPosition" ],
@@ -332,13 +347,13 @@
         "prefix": [ "SimObject.SetRotation", "SetRotation" ],
         "body": "SetRotation(Vector3(${x}, ${y}, ${z}))$0"
     },
-    "SimObject.Name: Hash":
-    {
-        "prefix": [ "SimObject.Name", "Name" ],
-        "body": "Name"
-    },
 
     // SimCharacter
+    "SimCharacter(): SimCharacter":
+    {
+        "prefix": "SimCharacter",
+        "body": "SimCharacter(${SimObject})$0"
+    },
     "SimCharacter.Create(): SimCharacter":
     {
         "prefix": "SimCharacter.Create",
@@ -373,5 +388,12 @@
     {
         "prefix": [ "SimCharacter.SetAIObjective", "SetAIObjective" ],
         "body": "SetAIObjective(${AIObjective})$0"
+    },
+
+    // SimVehicle
+    "SimVehicle(): SimVehicle":
+    {
+        "prefix": "SimVehicle",
+        "body": "SimVehicle(${SimObject})$0"
     },
 }
