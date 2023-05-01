@@ -1,0 +1,377 @@
+{
+    // Enums
+    "AIObjective":
+    {
+        "prefix": "AIObjective",
+        "body": "AIObjective.${1|None,AttackTarget,AttackNearbyTarget,AttackWhenSeeTarget,AttackWhenStealthTargetSpotted,AttackUsingCover,AttackInScriptedVehicle,ShootAtMarket,Flee,FleeSpreadPanic,ForceEnterCover,RunLaterallyFromTarget,InvestigateTarget,PursuitTarget,FollowTarget,FaceTarget,FaceTargetWhileScared,BeAlly,GetInVehicle,GetOutOfVehicle,BeIntimidated,PathFindToSelectedObject,HijackVehicle,Idle,MoveAway,RunAway,GrabAndHold,DuckAndCover,Denouement,WeaponPickup,CombatDummy,PathFindToPointWithBreakout,CombatFastTalk,AttackSuckerPunchTarget,RobTarget,PatDownTarget|}$0"
+    },
+    "FactionClass":
+    {
+        "prefix": "FactionClass",
+        "body": "FactionClass.${1|Invalid,Indifferent,Player,Law,Triad_Winston,Triad_Dogeyes,Triad_Sonny,Triad_Jiiang,Triad_Cheuk\n,Triad_TwoChin,Triad_Generic,Triad_WaterStreet,Triad_18K,Triad_Dogboys,Triad_SunOnYee,Triad_Lee,Bouncer,Innocent,Student,Ambient_Aggressive,Ambient_Group1,Ambient_Group2,Ambient_Group3,Ambient_Group4,Network_Team1,Network_Team2,Network_Team3,Network_Team4,Network_Team5,Network_Team6,Network_Team7,Network_Team8,Hostile_Special1,Hostile_Special2,Allied_Special1,Allied_Special2,Law_Hostile,Rooster1,Rooster2|}$0"
+    },
+    "FightingClass":
+    {
+        "prefix": "FightingClass",
+        "body": "FightingClass.${1|Invalid,None,NonCombatant,Striker,StrikerQuick,StrikerBrawler,Grappler,Tutorial,Enforcer,Elite|}$0"
+    },
+    "Gender":
+    {
+        "prefix": "Gender",
+        "body": "Gender.${1|Invalid,Male,Female|}$0"
+    },
+    "TargetType":
+    {
+        "prefix": "TargetType",
+        "body": "TargetType.${1|Invalid,Self,Attacker,AimPosition,VehicleDriver,VehiclePassenger,VehiclePassenger2,VehiclePassenger3,VehiclePassenger4,VehicleRoleSwapTemp,VehicleCargo1,VehicleCargo2,VehicleCargo3,VehiclePassengerTrunk,ClosestPed,CoverObject,CoverPopout,Equipped,EquippedLeftHand,EquippedHat,EquippedGlasses,Facing,Focus,Grapple,LookAt,PoiLookAt,PoiUse,PoiParentObject,Vehicle,AIObjective,ToFollow,Player,ScriptedMarker,StimulusProducer,ConditionStimulusProducer,IgnoreAvoidance,LastThreat,PointAt,Attacking,Conversation,InteractiveProp,PickupItem,StowedWeapon,Stowed2HWeapon,VehicleActionHijack,VehicleActionHijackPotential,VehicleClosestPoint,ClosestDownedPed,Directional,Physical,Social,CrowdPushPrimary,CrowdPushSecondary,Escort,Owner,LastCreatedObject,SubTarget,Transit,WorldEditorSelectedObject,CraneContainerAttached,CraneContainerUnattached,MySpawnPoint,GroupLeader,GroupMember,GroupMember2,GroupMember3,GroupMember4,GroupMemberPaired,BestInteractionPoint,InteractionPoint0,InteractionPoint1,InteractionPoint2,InteractionPoint3,InteractionPoint4,InteractionPoint5,HijackableVehicle,Sync,BestMeleeAttacker,LastAttacked,InteractionOffset,Transaction,LastGrapple,ProbeLowL,ProbeLowC,ProbeLowR,ProbeMidL,ProbeMidC,ProbeMidR,ProbeHighL,ProbeHighC,ProbeHighR|}$0"
+    },
+
+    // Color
+    "Color()":
+    {
+        "prefix": "Color",
+        "body": "Color(${r}, ${g}, ${b}, ${a})$0"
+    },
+
+    // Vector2
+    "Vector2()":
+    {
+        "prefix": "Vector2",
+        "body": "Vector2(${x}, ${y})$0"
+    },
+    "Vector2.Add()":
+    {
+        "prefix": [ "Vector2.Add", "Add" ],
+        "body": ".Add(Vector2(${x}, ${y}))$0"
+    },
+    "Vector2.Subtract()":
+    {
+        "prefix": [ "Vector2.Subtract", "Subtract" ],
+        "body": ".Subtract(Vector2(${x}, ${y}))$0"
+    },
+    "Vector2.Multiply()":
+    {
+        "prefix": [ "Vector2.Multiply", "Multiply" ],
+        "body": ".Multiply(${value})$0"
+    },
+    "Vector2.Divide()":
+    {
+        "prefix": [ "Vector2.Divide", "Divide" ],
+        "body": ".Divide(${value})$0"
+    },
+    "Vector2.Equals(): boolean":
+    {
+        "prefix": [ "Vector2.Equals", "Equals" ],
+        "body": ".Equals(Vector2(${x}, ${y}))$0"
+    },
+    "Vector2.Length(): float":
+    {
+        "prefix": [ "Vector2.Length", "Length" ],
+        "body": ".Length()$0"
+    },
+    "Vector2.Normalize()":
+    {
+        "prefix": [ "Vector2.Normalize", "Normalize" ],
+        "body": ".Normalize()$0"
+    },
+    "Vector2.DistTo(): float":
+    {
+        "prefix": [ "Vector2.DistTo", "DistTo" ],
+        "body": ".DistTo(Vector2(${x}, ${y}))$0"
+    },
+
+    // Vector3
+    "Vector3()":
+    {
+        "prefix": "Vector3",
+        "body": "Vector3(${x}, ${y}, ${z})$0"
+    },
+    "Vector3.Add()":
+    {
+        "prefix": [ "Vector3.Add", "Add" ],
+        "body": ".Add(Vector3(${x}, ${y}, ${z}))$0"
+    },
+    "Vector3.Subtract()":
+    {
+        "prefix": [ "Vector3.Subtract", "Subtract" ],
+        "body": ".Subtract(Vector3(${x}, ${y}, ${z}))$0"
+    },
+    "Vector3.Multiply()":
+    {
+        "prefix": [ "Vector3.Multiply", "Multiply" ],
+        "body": ".Multiply(${value})$0"
+    },
+    "Vector3.Divide()":
+    {
+        "prefix": [ "Vector3.Divide", "Divide" ],
+        "body": ".Divide(${value})$0"
+    },
+    "Vector3.Equals(): boolean":
+    {
+        "prefix": [ "Vector3.Equals", "Equals" ],
+        "body": ".Equals(Vector3(${x}, ${y}, ${z}))$0"
+    },
+    "Vector3.Length(): float":
+    {
+        "prefix": [ "Vector3.Length", "Length" ],
+        "body": ".Length()$0"
+    },
+    "Vector3.Normalize()":
+    {
+        "prefix": [ "Vector3.Normalize", "Normalize" ],
+        "body": ".Normalize()$0"
+    },
+    "Vector3.DistTo(): float":
+    {
+        "prefix": [ "Vector3.DistTo", "DistTo" ],
+        "body": ".DistTo(Vector3(${x}, ${y}, ${z}))$0"
+    },
+
+    // Console
+    "Console.AddCommand()":
+    {
+        "prefix": "Console.AddCommand",
+        "body": "Console.AddCommand(${name}, ${description}, ${usage}, ${numargs}, ${callback})$0"
+    },
+    "Console.RemoveCommand()":
+    {
+        "prefix": "Console.RemoveCommand",
+        "body": "Console.RemoveCommand(${name})$0"
+    },
+    "Console.Print()":
+    {
+        "prefix": "Console.Print",
+        "body": "Console.Print(${text}, Color(${r}, ${g}, ${b}, ${a}), ${sameline})$0"
+    },
+
+    // Font
+    "Font.GetDefault(): Font":
+    {
+        "prefix": "Font.GetDefault",
+        "body": "Font.GetDefault()$0"
+    },
+    "Font.Add(): Font":
+    {
+        "prefix": "Font.Add",
+        "body": "Font.Add(${name}, ${size})$0"
+    },
+    "Font.Remove()":
+    {
+        "prefix": [ "Font.Remove", "Remove" ],
+        "body": "Remove()$0"
+    },
+    "Font.GetTextSize(): Vector2":
+    {
+        "prefix": [ "Font.GetTextSize", "GetTextSize" ],
+        "body": "GetTextSize(${text})$0"
+    },
+    "Font.size: float":
+    {
+        "prefix": [ "Font.size", "size" ],
+        "body": "size"
+    },
+
+    // Hash
+    "Hash()":
+    {
+        "prefix": "Hash",
+        "body": "Hash(${text})$0"
+    },
+    "Hash.Get(): hexadecimal":
+    {
+        "prefix": "Hash.Get",
+        "body": "Hash.Get(${text})$0"
+    },
+    "Hash.value: hexadecimal":
+    {
+        "prefix": [ "Hash.value", "value" ],
+        "body": "value"
+    },
+
+    // Image
+    "Image.Add(): Image":
+    {
+        "prefix": "Image.Add",
+        "body": "Image.Add(${name}, ${size})$0"
+    },
+    "Image.Remove()":
+    {
+        "prefix": [ "Image.Remove", "Remove" ],
+        "body": "Remove()$0"
+    },
+    "Image.size: Vector2":
+    {
+        "prefix": [ "Image.size", "size" ],
+        "body": "size"
+    },
+
+    // Renderer
+    "Renderer.GetScreenSize(): Vector2(x, y)":
+    {
+        "prefix": "Renderer.GetScreenSize",
+        "body": "Renderer.GetScreenSize()$0"
+    },
+    "Renderer.SetRounding()":
+    {
+        "prefix": "Renderer.SetRounding",
+        "body": "Renderer.SetRounding(${value}, ${tl}, ${tr}, ${bl}, ${br})$0"
+    },
+    "Renderer.SetThickness()":
+    {
+        "prefix": "Renderer.SetThickness",
+        "body": "Renderer.SetThickness(${value})$0"
+    },
+    "Renderer.SetTextAlign()":
+    {
+        "prefix": "Renderer.SetTextAlign",
+        "body": "Renderer.SetTextAlign(${1|/* Left */0,/* Center */1,/* Right */2|})$0"
+    },
+    "Renderer.AddLine()":
+    {
+        "prefix": "Renderer.AddLine",
+        "body": "Renderer.AddLine(Vector2(${from_x}, ${from_y}), Vector2(${to_x}, ${to_y}), Color(${r}, ${g}, ${b}, ${a}))$0"
+    },
+    "Renderer.AddRect()":
+    {
+        "prefix": "Renderer.AddRect",
+        "body": "Renderer.AddRect(Vector2(${from_x}, ${from_y}), Vector2(${to_x}, ${to_y}), Color(${r}, ${g}, ${b}, ${a}))$0"
+    },
+    "Renderer.AddRectFilled()":
+    {
+        "prefix": "Renderer.AddRectFilled",
+        "body": "Renderer.AddRectFilled(Vector2(${from_x}, ${from_y}), Vector2(${to_x}, ${to_y}), Color(${r}, ${g}, ${b}, ${a}))$0"
+    },
+    "Renderer.AddImage()":
+    {
+        "prefix": "Renderer.AddImage",
+        "body": "Renderer.AddImage(${Image}, Vector2(${position_x}, ${position_y}), Vector2(${size_x}, ${size_y}), Color(${r}, ${g}, ${b}, ${a}))$0"
+    },
+    "Renderer.AddText()":
+    {
+        "prefix": "Renderer.AddText",
+        "body": "Renderer.AddText(${Font}, Vector2(${position_x}, ${position_y}), Color(${r}, ${g}, ${b}, ${a}), ${text})$0"
+    },
+    "Renderer.AddTextShadow()":
+    {
+        "prefix": "Renderer.AddTextShadow",
+        "body": "Renderer.AddTextShadow(${Font}, Vector2(${position_x}, ${position_y}), Color(${r}, ${g}, ${b}, ${a}), ${text})$0"
+    },
+
+    // Timer
+    "Timer.Add(): Timer":
+    {
+        "prefix": "Timer.Add",
+        "body": "Timer.Add(${callback}, ${delay})$0"
+    },
+    "Timer.Destroy()":
+    {
+        "prefix": [ "Timer.Destroy", "Destroy" ],
+        "body": "Destroy()$0"
+    },
+    "Timer.remaining: float":
+    {
+        "prefix": [ "Timer.remaining", "remaining" ],
+        "body": "remaining"
+    },
+
+    // Audio
+    "Audio.PlaySound(): boolean":
+    {
+        "prefix": "Audio.PlaySound",
+        "body": "Audio.PlaySound(${bank}, ${name})$0"
+    },
+    "Audio.StopSound()":
+    {
+        "prefix": "Audio.StopSound",
+        "body": "Audio.StopSound(${name})$0"
+    },
+    "Audio.PlaySpeech(): boolean":
+    {
+        "prefix": "Audio.PlaySpeech",
+        "body": "Audio.PlaySpeech(${SimCharacter}, ${event}, ${name})$0"
+    },
+    "Audio.StopSpeech()":
+    {
+        "prefix": "Audio.StopSpeech",
+        "body": "Audio.StopSpeech(${SimCharacter})$0"
+    },
+
+    // SimObject
+    "SimObject.Destroy()":
+    {
+        "prefix": [ "SimObject.Destroy", "Destroy" ],
+        "body": "Destroy()$0"
+    },
+    "SimObject.Restore()":
+    {
+        "prefix": [ "SimObject.Restore", "Restore" ],
+        "body": "Restore()$0"
+    },
+    "SimObject.Suspend()":
+    {
+        "prefix": [ "SimObject.Suspend", "Suspend" ],
+        "body": "Suspend()$0"
+    },
+    "SimObject.GetPosition(): Vector3":
+    {
+        "prefix": [ "SimObject.GetPosition", "GetPosition" ],
+        "body": "GetPosition()$0"
+    },
+    "SimObject.SetPosition()":
+    {
+        "prefix": [ "SimObject.SetPosition", "SetPosition" ],
+        "body": "SetPosition(Vector3(${x}, ${y}, ${z}))$0"
+    },
+    "SimObject.GetRotation(): Vector3":
+    {
+        "prefix": [ "SimObject.GetRotation", "GetRotation" ],
+        "body": "GetRotation()$0"
+    },
+    "SimObject.SetRotation()":
+    {
+        "prefix": [ "SimObject.SetRotation", "SetRotation" ],
+        "body": "SetRotation(Vector3(${x}, ${y}, ${z}))$0"
+    },
+    "SimObject.Name: Hash":
+    {
+        "prefix": [ "SimObject.Name", "Name" ],
+        "body": "Name"
+    },
+
+    // SimCharacter
+    "SimCharacter.Create(): SimCharacter":
+    {
+        "prefix": "SimCharacter.Create",
+        "body": "SimCharacter.Create(${model}, Vector3(${x}, ${y}, ${z}), ${heading})$0"
+    },
+    "SimCharacter.GetLocalPlayer(): SimCharacter":
+    {
+        "prefix": "SimCharacter.GetLocalPlayer",
+        "body": "SimCharacter.GetLocalPlayer()$0"
+    },
+    "SimCharacter.SetAttackRights()":
+    {
+        "prefix": [ "SimCharacter.SetAttackRights", "SetAttackRights" ],
+        "body": "SetAttackRights(${boolean})$0"
+    },
+    "SimCharacter.SetTarget()":
+    {
+        "prefix": [ "SimCharacter.SetTarget", "SetTarget" ],
+        "body": "SetTarget(${TargetType}, ${SimObject})$0"
+    },
+    "SimCharacter.SetTargetLock()":
+    {
+        "prefix": [ "SimCharacter.SetTargetLock", "SetTargetLock" ],
+        "body": "SetTargetLock(${TargetType}, ${lock}, ${modifycollision})$0"
+    },
+    "SimCharacter.ClearTarget()":
+    {
+        "prefix": [ "SimCharacter.ClearTarget", "ClearTarget" ],
+        "body": "ClearTarget(${TargetType})$0"
+    },
+    "SimCharacter.SetAIObjective()":
+    {
+        "prefix": [ "SimCharacter.SetAIObjective", "SetAIObjective" ],
+        "body": "SetAIObjective(${AIObjective})$0"
+    },
+}
