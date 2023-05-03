@@ -39,5 +39,5 @@ function GameSliceForceLoad_Command(Args)
     TryLoadGameSlice(Args[0]);
 }
 
-Console.AddCommand("gameslice_load", "Load gameslice by name", "<name>", 2, GameSliceLoad_Command);
+Console.AddCommand("gameslice_load", "Load gameslice by name", "<name>", 1, GameSliceLoad_Command);
 Console.AddCommand("gameslice_fload", "Load forcefully gameslice by name", "<name>", 1, GameSliceForceLoad_Command);
