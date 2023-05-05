@@ -20,6 +20,11 @@
         "prefix": "Gender",
         "body": "Gender.${1|Invalid,Male,Female|}$0"
     },
+    "GameSliceState":
+    {
+        "prefix": "Gender",
+        "body": "Gender.${1|Locked,Unlocked,Restoring,Started,Completed|}$0"
+    },
     "TargetType":
     {
         "prefix": "TargetType",
@@ -299,6 +304,69 @@
     {
         "prefix": "Audio.StopSpeech",
         "body": "Audio.StopSpeech(${SimCharacter})$0"
+    },
+
+     // GameSlice
+    "GameSlice.ForceLock()":
+    {
+        "prefix": [ "GameSlice.ForceLock", "ForceLock" ],
+        "body": "Destroy()$0"
+    },
+    "GameSlice.State: GameSliceState":
+    {
+        "prefix": [ "GameSlice.State", "State" ],
+        "body": "State$0"
+    },
+
+    // Metrics
+    "Metrics.SimTime: float":
+    {
+        "prefix": "Metrics.SimTime",
+        "body": "Metrics.SimTime$0"
+    },
+    "Metrics.SimTimeDelta: float":
+    {
+        "prefix": "Metrics.SimTimeDelta",
+        "body": "Metrics.SimTimeDelta$0"
+    },
+    "Metrics.SimTimeScale: float":
+    {
+        "prefix": "Metrics.SimTimeScale",
+        "body": "Metrics.SimTimeScale$0"
+    },
+
+    // PDA
+    "PDA.EndPhoneCall()":
+    {
+        "prefix": "PDA.EndPhoneCall",
+        "body": "PDA.EndPhoneCall()$0"
+    },
+    "PDA.AddContact()":
+    {
+        "prefix": "PDA.AddContact",
+        "body": "PDA.AddContact(${name}, ${portrait}, ${callback})$0"
+    },
+    "PDA.RemoveContact()":
+    {
+        "prefix": "PDA.RemoveContact",
+        "body": "PDA.RemoveContact(${name})$0"
+    },
+
+    // ProgressionTracker
+    "ProgressionTracker.Find(): GameSlice":
+    {
+        "prefix": "ProgressionTracker.Find",
+        "body": "ProgressionTracker.Find(${name}, ${searchDisabledSlices})$0"
+    },
+    "ProgressionTracker.ForceSliceChange()":
+    {
+        "prefix": "ProgressionTracker.ForceSliceChange",
+        "body": "ProgressionTracker.ForceSliceChange(${slice}, ${simulateRewards})$0"
+    },
+    "ProgressionTracker.MoveAllSlicesInDisabledList()":
+    {
+        "prefix": "ProgressionTracker.MoveAllSlicesInDisabledList",
+        "body": "ProgressionTracker.MoveAllSlicesInDisabledList()$0"
     },
 
     // SimObject
