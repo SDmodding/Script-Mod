@@ -370,6 +370,16 @@
     },
 
     // SimObject
+    "SimObject.GetHead(): SimObject":
+    {
+        "prefix": "SimObject.GetHead",
+        "body": "SimObject.GetHead()$0"
+    },
+    "SimObject.GetNext(): SimObject":
+    {
+        "prefix": [ "SimObject.GetNext", "GetNext" ],
+        "body": "GetNext()$0"
+    },
     "SimObject.Destroy()":
     {
         "prefix": [ "SimObject.Destroy", "Destroy" ],
@@ -514,6 +524,36 @@
         "prefix": "SimVehicle.Create",
         "body": "SimVehicle.Create(${model}, Vector3(${x}, ${y}, ${z}), Vector3(${rx}, ${ry}, ${rz}))$0"
     },
+    "SimVehicle.GetPrimaryColor(): Color":
+    {
+        "prefix": [ "SimVehicle.GetPrimaryColor", "GetPrimaryColor" ],
+        "body": "GetPrimaryColor()$0"
+    },
+    "SimVehicle.SetPrimaryColor(): Color":
+    {
+        "prefix": [ "SimVehicle.SetPrimaryColor", "SetPrimaryColor" ],
+        "body": "SetPrimaryColor(Color(${r}, ${g}, ${b}))$0"
+    },
+    "SimVehicle.GetSecondaryColor(): Color":
+    {
+        "prefix": [ "SimVehicle.GetSecondaryColor", "GetSecondaryColor" ],
+        "body": "GetPrimaryColor()$0"
+    },
+    "SimVehicle.SetSecondaryColor(): Color":
+    {
+        "prefix": [ "SimVehicle.SetSecondaryColor", "SetSecondaryColor" ],
+        "body": "SetSecondaryColor(Color(${r}, ${g}, ${b}))$0"
+    },
+    "SimVehicle.GetShaderValue(): Color":
+    {
+        "prefix": [ "SimVehicle.GetShaderValue", "GetShaderValue" ],
+        "body": "GetPrimaryColor(${index})$0"
+    },
+    "SimVehicle.SetShaderValue(): Color":
+    {
+        "prefix": [ "SimVehicle.SetShaderValue", "SetShaderValue" ],
+        "body": "SetShaderValue(${index}, ${value})$0"
+    },
     "SimVehicle.EngineDamage: float":
     {
         "prefix": [ "SimVehicle.EngineDamage", "EngineDamage" ],
@@ -523,5 +563,67 @@
     {
         "prefix": [ "SimVehicle.DoorsLocked", "DoorsLocked" ],
         "body": "DoorsLocked$0"
+    },
+
+    // TimeOfDayManager
+    "TimeOfDayManager.IsAboutToRain(): boolean":
+    {
+        "prefix": "TimeOfDayManager.IsAboutToRain",
+        "body": "TimeOfDayManager.IsAboutToRain()$0"
+    },
+    "TimeOfDayManager.LockWeather()":
+    {
+        "prefix": "TimeOfDayManager.LockWeather",
+        "body": "TimeOfDayManager.LockWeather(${lock})$0"
+    },
+    "TimeOfDayManager.GameSecondsPerRealSecond: float":
+    {
+        "prefix": "TimeOfDayManager.GameSecondsPerRealSecond",
+        "body": "TimeOfDayManager.GameSecondsPerRealSecond$0"
+    },
+    "TimeOfDayManager.SecondsSinceMidnight: float":
+    {
+        "prefix": "TimeOfDayManager.SecondsSinceMidnight",
+        "body": "TimeOfDayManager.SecondsSinceMidnight$0"
+    },
+    "TimeOfDayManager.OverrideSurfaceWetness: float":
+    {
+        "prefix": "TimeOfDayManager.OverrideSurfaceWetness",
+        "body": "TimeOfDayManager.OverrideSurfaceWetness$0"
+    },
+    "TimeOfDayManager.RainChance: float":
+    {
+        "prefix": "TimeOfDayManager.RainChance",
+        "body": "TimeOfDayManager.RainChance$0"
+    },
+    "TimeOfDayManager.Weather: float":
+    {
+        "prefix": "TimeOfDayManager.Weather",
+        "body": "TimeOfDayManager.Weather$0"
+    },
+    "TimeOfDayManager.WeatherTarget: float":
+    {
+        "prefix": "TimeOfDayManager.WeatherTarget",
+        "body": "TimeOfDayManager.WeatherTarget$0"
+    },
+    "TimeOfDayManager.WeatherRandomInterval: float":
+    {
+        "prefix": "TimeOfDayManager.WeatherRandomInterval",
+        "body": "TimeOfDayManager.WeatherRandomInterval$0"
+    },
+    "TimeOfDayManager.WindDirection: float":
+    {
+        "prefix": "TimeOfDayManager.WindDirection",
+        "body": "TimeOfDayManager.WindDirection$0"
+    },
+    "TimeOfDayManager.WindSpeed: float":
+    {
+        "prefix": "TimeOfDayManager.WindSpeed",
+        "body": "TimeOfDayManager.WindSpeed$0"
+    },
+    "TimeOfDayManager.WindSpeedTarget: float":
+    {
+        "prefix": "TimeOfDayManager.WindSpeedTarget",
+        "body": "TimeOfDayManager.WindSpeedTarget$0"
     },
 }
