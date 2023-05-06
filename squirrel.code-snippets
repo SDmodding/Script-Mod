@@ -529,7 +529,7 @@
         "prefix": [ "SimVehicle.GetPrimaryColor", "GetPrimaryColor" ],
         "body": "GetPrimaryColor()$0"
     },
-    "SimVehicle.SetPrimaryColor(): Color":
+    "SimVehicle.SetPrimaryColor()":
     {
         "prefix": [ "SimVehicle.SetPrimaryColor", "SetPrimaryColor" ],
         "body": "SetPrimaryColor(Color(${r}, ${g}, ${b}))$0"
@@ -539,17 +539,17 @@
         "prefix": [ "SimVehicle.GetSecondaryColor", "GetSecondaryColor" ],
         "body": "GetPrimaryColor()$0"
     },
-    "SimVehicle.SetSecondaryColor(): Color":
+    "SimVehicle.SetSecondaryColor()":
     {
         "prefix": [ "SimVehicle.SetSecondaryColor", "SetSecondaryColor" ],
         "body": "SetSecondaryColor(Color(${r}, ${g}, ${b}))$0"
     },
-    "SimVehicle.GetShaderValue(): Color":
+    "SimVehicle.GetShaderValue(): float":
     {
         "prefix": [ "SimVehicle.GetShaderValue", "GetShaderValue" ],
         "body": "GetPrimaryColor(${index})$0"
     },
-    "SimVehicle.SetShaderValue(): Color":
+    "SimVehicle.SetShaderValue()":
     {
         "prefix": [ "SimVehicle.SetShaderValue", "SetShaderValue" ],
         "body": "SetShaderValue(${index}, ${value})$0"
