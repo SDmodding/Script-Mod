@@ -1,4 +1,5 @@
 # Script Mod
+Modification which is wrapped around SDK functions and embeds it to Squirrel Language.
 
 ## Installation
 - Download latest release from: [Here](https://github.com/SDmodding/Script-Mod/releases).
@@ -7,6 +8,12 @@
 ## Script Installation
 - Inside game folder after first game launched you have folder called: __Scripts__.
 - All scripts inside this folder that ends with extension ".nut" will be automatically loaded on game launch.
+
+## Bug Reports
+- If your game is crashing on certain script function or part, please open issue and post the script you're running and how to reproduce it.
+
+## Suggestions
+- If you have some suggestion to embed to script, please open issue and write exactly what you want and depending of difficulty it might be added on next version.
 
 ## Console Usage
 - Opens with: __F1__ key.
