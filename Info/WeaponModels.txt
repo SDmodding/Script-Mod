@@ -5,7 +5,6 @@
 0x06CFC0B6 - object-physical-prop-StreamedObject-Purse001
 0x3FA63C5B - object-physical-prop-StreamedObject-PurseHand001
 0x43E25501 - object-physical-prop-StreamedObject-ShoppingBag001
-0x9C5D997C - object-physical-weapon-firearm
 0xB3E9C5CB - object-physical-weapon-firearm-camera-pda
 0xA7FF2A64 - object-physical-weapon-firearm-fireextinguisher-fireextinguisher
 0x227F1078 - object-physical-weapon-firearm-pistol-45cal
