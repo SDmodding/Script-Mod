@@ -1,4 +1,3 @@
-0x79C303E9 - object-physical-character
 0x2965747A - object-physical-character-80sTriad
 0x30704A5B - object-physical-character-ACE
 0x72BC43A4 - object-physical-character-Alex
