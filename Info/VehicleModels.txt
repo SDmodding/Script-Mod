@@ -1,4 +1,3 @@
-0x51524B6E - object-physical-vehicle
 0xB5C4A6CC - object-physical-vehicle-1100NAR01
 0xDE09691D - object-physical-vehicle-1100NAR_Race01
 0xD34A4FC4 - object-physical-vehicle-1100NAR_Race02
