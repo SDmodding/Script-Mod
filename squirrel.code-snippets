@@ -20,10 +20,15 @@
         "prefix": "Gender",
         "body": "Gender.${1|Invalid,Male,Female|}$0"
     },
+    "MissionProgressState":
+    {
+        "prefix": "MissionProgressState",
+        "body": "MissionProgressState.${1|Invalid,Normal,Danger,Complete,Incomplete,AnimateComplete|}$0"
+    },
     "GameSliceState":
     {
-        "prefix": "Gender",
-        "body": "Gender.${1|Locked,Unlocked,Restoring,Started,Completed|}$0"
+        "prefix": "GameSliceState",
+        "body": "GameSliceState.${1|Locked,Unlocked,Restoring,Started,Completed|}$0"
     },
     "TargetType":
     {
@@ -34,6 +39,11 @@
     {
         "prefix": "SimObjectType",
         "body": "SimObjectType.${1|IAIPathMarker,AIJumpPoint,AIOutlineRegion,AISeedPoint,AudioEmitterMarker,AudioTriggerRegion,BoostRegion,Camera,CameraMarker,Character,Collectible,CombatRegion,CopRoadBlock,Director,Door,DynamicLight,FleeToPoint,FXSimComponent,HidingSpot,HijackReturn,InterestPoint,IrradianceVolume,Marker,MarkerProgressionTrigger,MarkerRaceStartingGrid,MeleeScriptSystem,ModelAsset,NISScriptSystem,ParkingSpot,Prefab,Prop,ReinforcementPoint,TrafficRegion,TriggerRegion,Turf,Vehicle,Weapon,WeaponSpawner,StartRegion,SpawnPoint,SpawnPointProgressionTrigger,SpawnRegion|}$0"
+    },
+    "UIButton":
+    {
+        "prefix": "UIButton",
+        "body": "UIButton.${1|Invalid,Accept,Back,Button1,Button2,Start,Select,L1,R1,L2,R2,L3,R3,L1R1,L2R2,DPAD_Up,DPAD_Down,DPAD_Left,DPAD_Right,DPAD_LR,DPAD_UD,L_Stick,R_Stick,L_Stick_LR,L_Stick_UD,R_Stick_LR,R_Stick_UD,Accept_Hold,Back_Hold,Button1_Hold,Button2_Hold,L1_Hold,R1_Hold,L2_Hold,R2_Hold,F1,Wheel_Up,Wheel_Down|}$0"
     },
 
     // Color
@@ -318,6 +328,88 @@
         "body": "State$0"
     },
 
+    // Hud
+    "Hud.ShowActionButton()":
+    {
+        "prefix": "Hud.ShowActionButton",
+        "body": "Hud.ShowActionButton(${text}, ${UIButton}, ${actiontype})$0"
+    },
+    "Hud.ShowActionButtonOneFrame()":
+    {
+        "prefix": "Hud.ShowActionButtonOneFrame",
+        "body": "Hud.ShowActionButtonOneFrame(${text}, ${UIButton}, ${actiontype})$0"
+    },
+    "Hud.HideActionButton()":
+    {
+        "prefix": "Hud.HideActionButton",
+        "body": "Hud.HideActionButton()$0"
+    },
+    "Hud.SetMissionHealthVisible()":
+    {
+        "prefix": "Hud.SetMissionHealthVisible",
+        "body": "Hud.SetMissionHealthVisible(${boolean})$0"
+    },
+    "Hud.SetMissionHealthCaption()":
+    {
+        "prefix": "Hud.SetMissionHealthCaption",
+        "body": "Hud.SetMissionHealthCaption(${text})$0"
+    },
+    "Hud.SetMissionHealthValue()":
+    {
+        "prefix": "Hud.SetMissionHealthValue",
+        "body": "Hud.SetMissionHealthValue(${value})$0"
+    },
+    "Hud.SetMissionHealthSuccess()":
+    {
+        "prefix": "Hud.SetMissionHealthSuccess",
+        "body": "Hud.SetMissionHealthSuccess(${boolean})$0"
+    },
+    "Hud.SetMissionProgressVisible()":
+    {
+        "prefix": "Hud.SetMissionProgressVisible",
+        "body": "Hud.SetMissionProgressVisible(${boolean})$0"
+    },
+    "Hud.ClearMissionProgress()":
+    {
+        "prefix": "Hud.ClearMissionProgress",
+        "body": "Hud.ClearMissionProgress()$0"
+    },
+    "Hud.SetMissionProgressState()":
+    {
+        "prefix": "Hud.SetMissionProgressState",
+        "body": "Hud.SetMissionProgressState(${MissionProgressState}, ${slot})$0"
+    },
+    "Hud.SetMissionProgressText()":
+    {
+        "prefix": "Hud.SetMissionProgressText",
+        "body": "Hud.SetMissionProgressText(${text}, ${slot})$0"
+    },
+    "Hud.ShowHintText()":
+    {
+        "prefix": "Hud.ShowHintText",
+        "body": "Hud.ShowHintText(${text}, ${time})$0"
+    },
+    "Hud.HideHintText()":
+    {
+        "prefix": "Hud.HideHintText",
+        "body": "Hud.HideHintText()$0"
+    },
+    "Hud.ShowInfoPopup()":
+    {
+        "prefix": "Hud.ShowInfoPopup",
+        "body": "Hud.ShowInfoPopup(${text}, ${time})$0"
+    },
+    "Hud.HideInfoPopup()":
+    {
+        "prefix": "Hud.HideInfoPopup",
+        "body": "Hud.HideInfoPopup()$0"
+    },
+    "Hud.ShouldRender":
+    {
+        "prefix": "Hud.ShouldRender",
+        "body": "Hud.ShouldRender$0"
+    },
+
     // Metrics
     "Metrics.SimTime: float":
     {
@@ -370,6 +462,11 @@
     },
 
     // SimObject
+    "SimObject.Create(): SimObject":
+    {
+        "prefix": "SimObject.Create",
+        "body": "SimObject.Create(${model}, Vector3(${x}, ${y}, ${z}), Vector3(${rx}, ${ry}, ${rz}))$0"
+    },
     "SimObject.GetHead(): SimObject":
     {
         "prefix": "SimObject.GetHead",
@@ -395,12 +492,17 @@
         "prefix": [ "SimObject.Suspend", "Suspend" ],
         "body": "Suspend()$0"
     },
-    "SimObject.GetName: Hash":
+    "SimObject.GetName(): Hash":
     {
         "prefix": [ "SimObject.GetName", "GetName" ],
         "body": "GetName()$0"
     },
-    "SimObject.GetType: SimObjectType":
+    "SimObject.GetPropertyName(): Hash":
+    {
+        "prefix": [ "SimObject.GetPropertyName", "GetPropertyName" ],
+        "body": "GetPropertyName()$0"
+    },
+    "SimObject.GetType(): SimObjectType":
     {
         "prefix": [ "SimObject.GetType", "GetType" ],
         "body": "GetType()$0"
@@ -426,6 +528,18 @@
         "body": "SetRotation(Vector3(${x}, ${y}, ${z}))$0"
     },
 
+    // SimObjectProp
+    "SimObjectProp(): SimObjectProp":
+    {
+        "prefix": "SimObjectProp",
+        "body": "SimObjectProp(${SimObject})$0"
+    },
+    "SimObjectProp.Create(): SimObjectProp":
+    {
+        "prefix": "SimObjectProp.Create",
+        "body": "SimObjectProp.Create(${model}, Vector3(${x}, ${y}, ${z}), Vector3(${rx}, ${ry}, ${rz}))$0"
+    },
+
     // SimCharacter
     "SimCharacter(): SimCharacter":
     {
@@ -446,6 +560,11 @@
     {
         "prefix": [ "SimCharacter.SetAttackRights", "SetAttackRights" ],
         "body": "SetAttackRights(${boolean})$0"
+    },
+    "SimCharacter.GetTarget(): SimObject":
+    {
+        "prefix": [ "SimCharacter.GetTarget", "GetTarget" ],
+        "body": "GetTarget(${TargetType})$0"
     },
     "SimCharacter.SetTarget()":
     {
@@ -563,6 +682,73 @@
     {
         "prefix": [ "SimVehicle.DoorsLocked", "DoorsLocked" ],
         "body": "DoorsLocked$0"
+    },
+
+    // SimWeapon
+    "SimWeapon(): SimWeapon":
+    {
+        "prefix": "SimWeapon",
+        "body": "SimWeapon(${SimObject})$0"
+    },
+    "SimWeapon.Create(): SimWeapon":
+    {
+        "prefix": "SimWeapon.Create",
+        "body": "SimWeapon.Create(${model}, Vector3(${x}, ${y}, ${z}), Vector3(${rx}, ${ry}, ${rz}))$0"
+    },
+    "SimWeapon.CreateAndEquip(): SimWeapon":
+    {
+        "prefix": "SimWeapon.Create",
+        "body": "SimWeapon.Create(${SimCharacter}, ${model})$0"
+    },
+    "SimWeapon.CreateAndEquipStowed(): SimWeapon":
+    {
+        "prefix": "SimWeapon.CreateAndEquipStowed",
+        "body": "SimWeapon.CreateAndEquipStowed(${SimCharacter}, ${model})$0"
+    },
+    "SimWeapon.GetEquipped(): SimWeapon":
+    {
+        "prefix": "SimWeapon.GetEquipped",
+        "body": "SimWeapon.GetEquipped(${SimCharacter})$0"
+    },
+    "SimWeapon.GetStowed(): SimWeapon":
+    {
+        "prefix": "SimWeapon.GetStowed",
+        "body": "SimWeapon.GetStowed(${SimCharacter})$0"
+    },
+    "SimWeapon.IsStowable(): boolean":
+    {
+        "prefix": [ "SimWeapon.IsStowable", "IsStowable" ],
+        "body": "IsStowable()$0"
+    },
+    "SimWeapon.Equip(): boolean":
+    {
+        "prefix": [ "SimWeapon.Equip", "Equip" ],
+        "body": "Equip(${SimCharacter})$0"
+    },
+    "SimWeapon.EquipStowed(): boolean":
+    {
+        "prefix": [ "SimWeapon.EquipStowed", "EquipStowed" ],
+        "body": "EquipStowed(${SimCharacter})$0"
+    },
+    "SimWeapon.ClipAmmo: integer":
+    {
+        "prefix": [ "SimWeapon.ClipAmmo", "ClipAmmo" ],
+        "body": "ClipAmmo$0"
+    },
+    "SimWeapon.TotalAmmo: integer":
+    {
+        "prefix": [ "SimWeapon.TotalAmmo", "TotalAmmo" ],
+        "body": "TotalAmmo$0"
+    },
+    "SimWeapon.LastFiredTime: float":
+    {
+        "prefix": [ "SimWeapon.LastFiredTime", "LastFiredTime" ],
+        "body": "LastFiredTime$0"
+    },
+    "SimWeapon.RateOfFireOverride: float":
+    {
+        "prefix": [ "SimWeapon.RateOfFireOverride", "RateOfFireOverride" ],
+        "body": "RateOfFireOverride$0"
     },
 
     // TimeOfDayManager
