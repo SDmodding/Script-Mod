@@ -1,4 +1,7 @@
 # Script Mod
+[![Current Release](https://img.shields.io/github/v/release/SDModding/Script-Mod?label=Current%20Release&color=red)](https://github.com/SDModding/Script-Mod/releases/latest)
+![Downloads](https://img.shields.io/github/downloads/SDModding/Script-Mod/total?label=Total%20Downloads&color=red)
+
 Modification which is wrapped around SDK functions and embeds it to Squirrel Language.
 
 ## Installation
