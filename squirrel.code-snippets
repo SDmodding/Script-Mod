@@ -581,6 +581,21 @@
         "prefix": [ "SimCharacter.ClearTarget", "ClearTarget" ],
         "body": "ClearTarget(${TargetType})$0"
     },
+    "SimCharacter.PlayActionNode(): boolean":
+    {
+        "prefix": [ "SimCharacter.PlayActionNode", "PlayActionNode" ],
+        "body": "PlayActionNode(${id})$0"
+    },
+    "SimCharacter.PlayActionNodeByName(): boolean":
+    {
+        "prefix": [ "SimCharacter.PlayActionNodeByName", "PlayActionNodeByName" ],
+        "body": "PlayActionNodeByName(${name})$0"
+    },
+    "SimCharacter.StopActionNode()":
+    {
+        "prefix": [ "SimCharacter.StopActionNode", "StopActionNode" ],
+        "body": "StopActionNode()$0"
+    },
     "SimCharacter.SetAIObjective()":
     {
         "prefix": [ "SimCharacter.SetAIObjective", "SetAIObjective" ],
@@ -697,8 +712,8 @@
     },
     "SimWeapon.CreateAndEquip(): SimWeapon":
     {
-        "prefix": "SimWeapon.Create",
-        "body": "SimWeapon.Create(${SimCharacter}, ${model})$0"
+        "prefix": "SimWeapon.CreateAndEquip",
+        "body": "SimWeapon.CreateAndEquip(${SimCharacter}, ${model})$0"
     },
     "SimWeapon.CreateAndEquipStowed(): SimWeapon":
     {
