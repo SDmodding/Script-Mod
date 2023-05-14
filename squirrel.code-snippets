@@ -5,6 +5,11 @@
         "prefix": "AIObjective",
         "body": "AIObjective.${1|None,AttackTarget,AttackNearbyTarget,AttackWhenSeeTarget,AttackWhenStealthTargetSpotted,AttackUsingCover,AttackInScriptedVehicle,ShootAtMarket,Flee,FleeSpreadPanic,ForceEnterCover,RunLaterallyFromTarget,InvestigateTarget,PursuitTarget,FollowTarget,FaceTarget,FaceTargetWhileScared,BeAlly,GetInVehicle,GetOutOfVehicle,BeIntimidated,PathFindToSelectedObject,HijackVehicle,Idle,MoveAway,RunAway,GrabAndHold,DuckAndCover,Denouement,WeaponPickup,CombatDummy,PathFindToPointWithBreakout,CombatFastTalk,AttackSuckerPunchTarget,RobTarget,PatDownTarget|}$0"
     },
+    "CharacterOccupantState":
+    {
+        "prefix": "Gender",
+        "body": "Gender.${1|None,EnterExit,Sitting|}$0"
+    },
     "FactionClass":
     {
         "prefix": "FactionClass",
@@ -15,11 +20,6 @@
         "prefix": "FightingClass",
         "body": "FightingClass.${1|Invalid,None,NonCombatant,Striker,StrikerQuick,StrikerBrawler,Grappler,Tutorial,Enforcer,Elite|}$0"
     },
-    "Gender":
-    {
-        "prefix": "Gender",
-        "body": "Gender.${1|Invalid,Male,Female|}$0"
-    },
     "MissionProgressState":
     {
         "prefix": "MissionProgressState",
@@ -29,6 +29,11 @@
     {
         "prefix": "GameSliceState",
         "body": "GameSliceState.${1|Locked,Unlocked,Restoring,Started,Completed|}$0"
+    },
+    "Gender":
+    {
+        "prefix": "Gender",
+        "body": "Gender.${1|Invalid,Male,Female|}$0"
     },
     "TargetType":
     {
@@ -44,6 +49,11 @@
     {
         "prefix": "UIButton",
         "body": "UIButton.${1|Invalid,Accept,Back,Button1,Button2,Start,Select,L1,R1,L2,R2,L3,R3,L1R1,L2R2,DPAD_Up,DPAD_Down,DPAD_Left,DPAD_Right,DPAD_LR,DPAD_UD,L_Stick,R_Stick,L_Stick_LR,L_Stick_UD,R_Stick_LR,R_Stick_UD,Accept_Hold,Back_Hold,Button1_Hold,Button2_Hold,L1_Hold,R1_Hold,L2_Hold,R2_Hold,F1,Wheel_Up,Wheel_Down|}$0"
+    },
+    "VirtualKey":
+    {
+        "prefix": "VirtualKey",
+        "body": "VirtualKey.${1|MouseLeft,MouseRight,MouseMiddle,MouseX1,MouseX2,Backspace,Tab,Enter,Pause,CapsLock,Escape,Space,PageUp,PageDown,End,Home,LeftArrow,UpArrow,RightArrow,DownArrow,PrintScreen,Insert,Delete,0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,LeftWin,RightWin,Menu,Numpad0,Numpad1,Numpad2,Numpad3,Numpad4,Numpad5,Numpad6,Numpad7,Numpad8,Numpad9,NumpadMultiply,NumpadAdd,NumpadSubtract,NumpadDecimal,NumpadDivide,F1,F2,F3,F4,F5,F6,F7,F8,F9,F10,F11,F12,NumLock,ScrollLock,LeftShift,RightShift,LeftCtrl,RightCtrl,LeftAlt,RightAlt,Semicolon,Equal,Comma,Minus,Period,Slash,GraveAccent,LeftBracket,Backslash,RightBracket,Apostrophe|}$0"
     },
 
     // Color
@@ -225,6 +235,23 @@
         "body": "size$0"
     },
 
+    // Input
+    "Input.IsKeyDown(): boolean":
+    {
+        "prefix": "Input.IsKeyDown",
+        "body": "Input.IsKeyDown(${VirtualKey})$0"
+    },
+    "Input.GetKeyDownDuration(): float":
+    {
+        "prefix": "Input.GetKeyDownDuration",
+        "body": "Input.GetKeyDownDuration(${VirtualKey})$0"
+    },
+    "Input.GetMousePosition(): Vector2":
+    {
+        "prefix": "Input.GetMousePosition",
+        "body": "Input.GetMousePosition()$0"
+    },
+
     // Renderer
     "Renderer.GetScreenSize(): Vector2(x, y)":
     {
@@ -316,7 +343,88 @@
         "body": "Audio.StopSpeech(${SimCharacter})$0"
     },
 
-     // GameSlice
+    // Camera
+    "Camera.GetType(): string":
+    {
+        "prefix": "Camera.GetType",
+        "body": "Camera.GetType()$0"
+    },
+    "Camera.IsScriptCameraOn(): boolean":
+    {
+        "prefix": "Camera.IsScriptCameraOn",
+        "body": "Camera.IsScriptCameraOn()$0"
+    },
+    "Camera.ToggleScriptCamera()":
+    {
+        "prefix": "Camera.ToggleScriptCamera",
+        "body": "Camera.ToggleScriptCamera(${toggle})$0"
+    },
+    "Camera.SetScriptCameraEyeLook()":
+    {
+        "prefix": "Camera.SetScriptCameraEyeLook",
+        "body": "Camera.SetScriptCameraEyeLook(Vector3(${eye_x}, ${eye_y}, ${eye_z}), Vector3(${look_x}, ${look_y}, ${look_z}), ${duration})$0"
+    },
+    "Camera.SetScriptCameraDOF()":
+    {
+        "prefix": "Camera.SetScriptCameraDOF",
+        "body": "Camera.SetScriptCameraDOF(${focaldistance}, ${focusrange}, ${nearblendrange}, ${nearblurradius}, ${farblendrange}, ${farblendradius})$0"
+    },
+    "Camera.ResetScriptCameraDOF()":
+    {
+        "prefix": "Camera.ResetScriptCameraDOF",
+        "body": "Camera.ResetScriptCameraDOF()$0"
+    },
+    "Camera.FOV: float":
+    {
+        "prefix": "Camera.FOV",
+        "body": "Camera.FOV$0"
+    },
+    "Camera.OverrideFOV: float":
+    {
+        "prefix": "Camera.OverrideFOV",
+        "body": "Camera.OverrideFOV$0"
+    },
+    "Camera.EnableOverrideFOV: boolean":
+    {
+        "prefix": "Camera.EnableOverrideFOV",
+        "body": "Camera.EnableOverrideFOV$0"
+    },
+
+    // CollisionData
+    "CollisionData.Position: Vector3":
+    {
+        "prefix": [ "CollisionData.Position", "Position" ],
+        "body": "Position$0"
+    },
+    "CollisionData.SimObject: SimObject":
+    {
+        "prefix": [ "CollisionData.SimObject", "SimObject" ],
+        "body": "SimObject$0"
+    },
+    "CollisionData.SimObjectCollider: SimObject":
+    {
+        "prefix": [ "CollisionData.SimObjectCollider", "SimObjectCollider" ],
+        "body": "SimObjectCollider$0"
+    },
+    "CollisionData.Velocity: Vector3":
+    {
+        "prefix": [ "CollisionData.Velocity", "Velocity" ],
+        "body": "Velocity$0"
+    },
+    "CollisionData.VelocityCollider: Vector3":
+    {
+        "prefix": [ "CollisionData.VelocityCollider", "VelocityCollider" ],
+        "body": "VelocityCollider$0"
+    },
+
+    // GameInput
+    "GameInput.Enable: boolean":
+    {
+        "prefix": "GameInput.Enable",
+        "body": "GameInput.Enable$0"
+    },
+
+    // GameSlice
     "GameSlice.ForceLock()":
     {
         "prefix": [ "GameSlice.ForceLock", "ForceLock" ],
@@ -601,6 +709,26 @@
         "prefix": [ "SimCharacter.SetAIObjective", "SetAIObjective" ],
         "body": "SetAIObjective(${AIObjective})$0"
     },
+    "SimCharacter.GetOccupantState(): CharacterOccupantState":
+    {
+        "prefix": [ "SimCharacter.GetOccupantState", "GetOccupantState" ],
+        "body": "GetOccupantState()$0"
+    },
+    "SimCharacter.GetCurrentVehicle(): SimVehicle":
+    {
+        "prefix": [ "SimCharacter.GetCurrentVehicle", "GetCurrentVehicle" ],
+        "body": "GetCurrentVehicle()$0"
+    },
+    "SimCharacter.GetCurrentVehicleSeatIndex(): integer":
+    {
+        "prefix": [ "SimCharacter.GetCurrentVehicleSeatIndex", "GetCurrentVehicleSeatIndex" ],
+        "body": "GetCurrentVehicleSeatIndex()$0"
+    },
+    "SimCharacter.PlaceInVehicle()":
+    {
+        "prefix": [ "SimCharacter.PlaceInVehicle", "PlaceInVehicle" ],
+        "body": "PlaceInVehicle(${SimVehicle}, ${seatIndex})$0"
+    },
     "SimCharacter.FactionClass: FactionClass":
     {
         "prefix": [ "SimCharacter.FactionClass", "FactionClass" ],
@@ -658,6 +786,16 @@
         "prefix": "SimVehicle.Create",
         "body": "SimVehicle.Create(${model}, Vector3(${x}, ${y}, ${z}), Vector3(${rx}, ${ry}, ${rz}))$0"
     },
+    "SimVehicle.GetDriver(): SimCharacter":
+    {
+        "prefix": [ "SimVehicle.GetDriver", "GetDriver" ],
+        "body": "GetDriver()$0"
+    },
+    "SimVehicle.GetPassenger(): SimCharacter":
+    {
+        "prefix": [ "SimVehicle.GetPassenger", "GetPassenger" ],
+        "body": "GetPassenger(${index})$0"
+    },
     "SimVehicle.GetPrimaryColor(): Color":
     {
         "prefix": [ "SimVehicle.GetPrimaryColor", "GetPrimaryColor" ],
@@ -697,6 +835,11 @@
     {
         "prefix": [ "SimVehicle.DoorsLocked", "DoorsLocked" ],
         "body": "DoorsLocked$0"
+    },
+    "SimVehicle.SeatCount: integer":
+    {
+        "prefix": [ "SimVehicle.SeatCount", "SeatCount" ],
+        "body": "SeatCount$0"
     },
 
     // SimWeapon
@@ -826,5 +969,37 @@
     {
         "prefix": "TimeOfDayManager.WindSpeedTarget",
         "body": "TimeOfDayManager.WindSpeedTarget$0"
+    },
+
+    // Callbacks
+    "Callback: OnCollision":
+    {
+        "prefix": [ "function OnCollision(CollisionData)", "OnCollision" ],
+        "body": "function OnCollision(CollisionData)\n{\n\t$0\n}"
+    },
+    "Callback: OnCharacterDeath":
+    {
+        "prefix": [ "function OnCharacterDeath(SimCharacter)", "OnCharacterDeath" ],
+        "body": "function OnCharacterDeath(SimCharacter)\n{\n\t$0\n}"
+    },
+    "Callback: OnGameUpdate":
+    {
+        "prefix": [ "function OnGameUpdate()", "OnGameUpdate" ],
+        "body": "function OnGameUpdate()\n{\n\t$0\n}"
+    },
+    "Callback: OnRender":
+    {
+        "prefix": [ "function OnRender(Renderer)", "OnRender" ],
+        "body": "function OnRender(Renderer)\n{\n\t$0\n}"
+    },
+    "Callback: OnUnload":
+    {
+        "prefix": [ "function OnUnload()", "OnUnload" ],
+        "body": "function OnUnload()\n{\n\t$0\n}"
+    },
+    "Callback: OnVehicleDeath":
+    {
+        "prefix": [ "function OnVehicleDeath(SimVehicle)", "OnVehicleDeath" ],
+        "body": "function OnVehicleDeath(SimVehicle)\n{\n\t$0\n}"
     },
 }
