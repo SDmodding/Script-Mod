@@ -6,7 +6,7 @@
 Modification which is wrapped around SDK functions and embeds it to Squirrel Language.
 
 ## Installation
-- Download latest release from: [Here](https://github.com/SDmodding/Script-Mod/releases).
+- Download latest release from: [Here](https://github.com/SDModding/Script-Mod/releases/latest).
 - Extract all files inside game folder.
 
 ## Script Installation
