@@ -157,6 +157,84 @@
         "body": "DistTo(Vector3(${x}, ${y}, ${z}))$0"
     },
 
+    // Config
+    "Config.IsEmpty(): boolean":
+    {
+        "prefix": "Config.IsEmpty",
+        "body": "Config.IsEmpty()$0"
+    },
+    "Config.KeyExists(): boolean":
+    {
+        "prefix": "Config.KeyExists",
+        "body": "Config.KeyExists(${section}, ${key})$0"
+    },
+    "Config.GetAllSections(): array[string]":
+    {
+        "prefix": "Config.GetAllSections",
+        "body": "Config.GetAllSections()$0"
+    },
+    "Config.GetAllKeys(): array[string]":
+    {
+        "prefix": "Config.GetAllKeys",
+        "body": "Config.GetAllKeys(${section})$0"
+    },
+    "Config.GetBoolean(): boolean":
+    {
+        "prefix": "Config.GetBoolean",
+        "body": "Config.GetBoolean(${section}, ${key}, ${default})$0"
+    },
+    "Config.SetBoolean()":
+    {
+        "prefix": "Config.SetBoolean",
+        "body": "Config.SetBoolean(${section}, ${key}, ${value})$0"
+    },
+    "Config.GetInteger(): integer":
+    {
+        "prefix": "Config.GetInteger",
+        "body": "Config.GetInteger(${section}, ${key}, ${default})$0"
+    },
+    "Config.SetInteger()":
+    {
+        "prefix": "Config.SetInteger",
+        "body": "Config.SetInteger(${section}, ${key}, ${value})$0"
+    },
+    "Config.GetHexadecimal(): hexadecimal":
+    {
+        "prefix": "Config.GetHexadecimal",
+        "body": "Config.GetHexadecimal(${section}, ${key}, ${default})$0"
+    },
+    "Config.SetHexadecimal()":
+    {
+        "prefix": "Config.SetHexadecimal",
+        "body": "Config.SetHexadecimal(${section}, ${key}, ${value})$0"
+    },
+    "Config.GetFloat(): float":
+    {
+        "prefix": "Config.GetFloat",
+        "body": "Config.GetFloat(${section}, ${key}, ${default})$0"
+    },
+    "Config.SetFloat()":
+    {
+        "prefix": "Config.SetFloat",
+        "body": "Config.SetFloat(${section}, ${key}, ${value})$0"
+    },
+    "Config.GetString(): string":
+    {
+        "prefix": "Config.GetString",
+        "body": "Config.GetString(${section}, ${key}, ${default})$0"
+    },
+    "Config.SetString()":
+    {
+        "prefix": "Config.SetString",
+        "body": "Config.SetString(${section}, ${key}, ${value})$0"
+    },
+    "Config.Delete(): boolean":
+    {
+        "prefix": "Config.Delete",
+        "body": "Config.Delete(${section}, ${key})$0"
+    },
+
+
     // Console
     "Console.AddCommand()":
     {
@@ -584,6 +662,11 @@
     {
         "prefix": [ "SimObject.GetNext", "GetNext" ],
         "body": "GetNext()$0"
+    },
+    "SimObject.SetDestroyOnUnload()":
+    {
+        "prefix": [ "SimObject.SetDestroyOnUnload", "SetDestroyOnUnload" ],
+        "body": "SetDestroyOnUnload(${toggle})$0"
     },
     "SimObject.Destroy()":
     {
