@@ -1,4 +1,16 @@
 {
+    // Consts
+    "CharacterBone":
+    {
+        "prefix": "CharacterBone",
+        "body": "CharacterBone.${1|Head,Neck,Pelvis,Spine,Spine1,Spine2,Spine3,L_Calf,L_Clavicle,L_Foot,L_Forearm,L_ForeTwist,L_Hand,L_Prop,L_Thigh,L_UpperArm,R_Calf,R_Clavicle,R_Foot,R_Forearm,R_ForeTwist,R_Hand,R_Prop,R_Thigh,R_UpperArm|}$0"
+    },
+    "PropBone":
+    {
+        "prefix": "PropBone",
+        "body": "PropBone.${1|AttachSync,Grip_L_Elbow,Grip_L_Hand,Grip_L_Shoulder,Grip_R_Elbow,Grip_R_Hand,Grip_R_Shoulder,Head,HeadSync|}$0"
+    },
+
     // Enums
     "AIObjective":
     {
@@ -730,6 +742,21 @@
         "prefix": "SimObjectProp.Create",
         "body": "SimObjectProp.Create(${model}, Vector3(${x}, ${y}, ${z}), Vector3(${rx}, ${ry}, ${rz}))$0"
     },
+    "SimObjectProp.IsAttached(): boolean":
+    {
+        "prefix": [ "SimObjectProp.IsAttached", "IsAttached" ],
+        "body": "IsAttached()$0"
+    },
+    "SimObjectProp.GetAttachBone(): string":
+    {
+        "prefix": [ "SimObjectProp.GetAttachBone", "GetAttachBone" ],
+        "body": "GetAttachBone()$0"
+    },
+    "SimObjectProp.GetPropBone(): string":
+    {
+        "prefix": [ "SimObjectProp.GetPropBone", "GetPropBone" ],
+        "body": "GetPropBone()$0"
+    },
 
     // SimCharacter
     "SimCharacter(): SimCharacter":
@@ -791,6 +818,41 @@
     {
         "prefix": [ "SimCharacter.SetAIObjective", "SetAIObjective" ],
         "body": "SetAIObjective(${AIObjective})$0"
+    },
+    "SimCharacter.GetBonesCount(): int":
+    {
+        "prefix": [ "SimCharacter.GetBonesCount", "GetBonesCount" ],
+        "body": "GetBonesCount()$0"
+    },
+    "SimCharacter.GetBoneName(): string":
+    {
+        "prefix": [ "SimCharacter.GetBoneName", "GetBoneName" ],
+        "body": "GetBoneName(${index})$0"
+    },
+    "SimCharacter.GetBonePosition(): Vector3":
+    {
+        "prefix": [ "SimCharacter.GetBonePosition", "GetBonePosition" ],
+        "body": "GetBonePosition(${hash})$0"
+    },
+    "SimCharacter.GetBoneRotation(): Vector3":
+    {
+        "prefix": [ "SimCharacter.GetBoneRotation", "GetBoneRotation" ],
+        "body": "GetBoneRotation(${hash})$0"
+    },
+    "SimCharacter.AttachProp(): boolean":
+    {
+        "prefix": [ "SimCharacter.AttachProp", "AttachProp" ],
+        "body": "AttachProp(${SimObjectProp})$0"
+    },
+    "SimCharacter.AttachProp(): [Advanced] boolean":
+    {
+        "prefix": [ "SimCharacter.AttachProp", "AttachProp" ],
+        "body": "AttachProp(${SimObjectProp}, ${CharacterBone}, ${PropBone})$0"
+    },
+    "SimCharacter.DetachProp(): boolean":
+    {
+        "prefix": [ "SimCharacter.DetachProp", "DetachProp" ],
+        "body": "DetachProp(${SimObjectProp})$0"
     },
     "SimCharacter.GetOccupantState(): CharacterOccupantState":
     {
