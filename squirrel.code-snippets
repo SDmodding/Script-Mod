@@ -730,6 +730,16 @@
         "prefix": [ "SimObject.SetRotation", "SetRotation" ],
         "body": "SetRotation(Vector3(${x}, ${y}, ${z}))$0"
     },
+    "SimObject.GetAttachmentCount(): integer":
+    {
+        "prefix": [ "SimObject.GetAttachmentCount", "GetAttachmentCount" ],
+        "body": "GetAttachmentCount()$0"
+    },
+    "SimObject.GetAttachments(): array[SimObject]":
+    {
+        "prefix": [ "SimObject.GetAttachments", "GetAttachments" ],
+        "body": "GetAttachments()$0"
+    },
 
     // SimObjectProp
     "SimObjectProp(): SimObjectProp":
