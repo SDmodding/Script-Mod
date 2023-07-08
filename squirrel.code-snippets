@@ -742,15 +742,15 @@
     },
 
     // SimObjectProp
-    "SimObjectProp(): SimObjectProp":
-    {
-        "prefix": "SimObjectProp",
-        "body": "SimObjectProp(${SimObject})$0"
-    },
     "SimObjectProp.Create(): SimObjectProp":
     {
         "prefix": "SimObjectProp.Create",
         "body": "SimObjectProp.Create(${model}, Vector3(${x}, ${y}, ${z}), Vector3(${rx}, ${ry}, ${rz}))$0"
+    },
+    "SimObjectProp.Get(): SimObjectProp":
+    {
+        "prefix": "SimObjectProp.Get",
+        "body": "SimObjectProp.Get(${SimObject})$0"
     },
     "SimObjectProp.IsAttached(): boolean":
     {
@@ -769,15 +769,15 @@
     },
 
     // SimCharacter
-    "SimCharacter(): SimCharacter":
-    {
-        "prefix": "SimCharacter",
-        "body": "SimCharacter(${SimObject})$0"
-    },
     "SimCharacter.Create(): SimCharacter":
     {
         "prefix": "SimCharacter.Create",
         "body": "SimCharacter.Create(${model}, Vector3(${x}, ${y}, ${z}), ${heading})$0"
+    },
+    "SimCharacter.Get(): SimCharacter":
+    {
+        "prefix": "SimCharacter.Get",
+        "body": "SimCharacter.Get(${SimObject})$0"
     },
     "SimCharacter.GetLocalPlayer(): SimCharacter":
     {
@@ -931,15 +931,15 @@
     },
 
     // SimVehicle
-    "SimVehicle(): SimVehicle":
-    {
-        "prefix": "SimVehicle",
-        "body": "SimVehicle(${SimObject})$0"
-    },
     "SimVehicle.Create(): SimVehicle":
     {
         "prefix": "SimVehicle.Create",
         "body": "SimVehicle.Create(${model}, Vector3(${x}, ${y}, ${z}), Vector3(${rx}, ${ry}, ${rz}))$0"
+    },
+    "SimVehicle.Get(): SimVehicle":
+    {
+        "prefix": "SimVehicle.Get",
+        "body": "SimVehicle.Get(${SimObject})$0"
     },
     "SimVehicle.GetDriver(): SimCharacter":
     {
@@ -998,11 +998,6 @@
     },
 
     // SimWeapon
-    "SimWeapon(): SimWeapon":
-    {
-        "prefix": "SimWeapon",
-        "body": "SimWeapon(${SimObject})$0"
-    },
     "SimWeapon.Create(): SimWeapon":
     {
         "prefix": "SimWeapon.Create",
@@ -1017,6 +1012,11 @@
     {
         "prefix": "SimWeapon.CreateAndEquipStowed",
         "body": "SimWeapon.CreateAndEquipStowed(${SimCharacter}, ${model})$0"
+    },
+    "SimWeapon.Get(): SimWeapon":
+    {
+        "prefix": "SimWeapon.Get",
+        "body": "SimWeapon.Get(${SimObject})$0"
     },
     "SimWeapon.GetEquipped(): SimWeapon":
     {
