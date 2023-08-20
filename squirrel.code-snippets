@@ -1137,6 +1137,11 @@
         "prefix": [ "function OnCharacterDeath(SimCharacter)", "OnCharacterDeath" ],
         "body": "function OnCharacterDeath(SimCharacter)\n{\n\t$0\n}"
     },
+    "Callback: OnCharacterSpawn":
+    {
+        "prefix": [ "function OnCharacterSpawn(SimCharacter, IsAmbient, CalledFromSkookum)", "OnCharacterSpawn" ],
+        "body": "function OnCharacterSpawn(SimCharacter, IsAmbient, CalledFromSkookum)\n{\n\t$0\n}"
+    },
     "Callback: OnGameUpdate":
     {
         "prefix": [ "function OnGameUpdate()", "OnGameUpdate" ],
