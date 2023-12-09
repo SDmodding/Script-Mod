@@ -5,6 +5,11 @@
 
 Modification which is wrapped around SDK functions and embeds it to Squirrel Language.
 
+# Update (9. December 2023)
+- This project is abandoned and I don't feel like I will ever comeback to it.
+- Barely got any attention, don't feel like wasting more time on it.
+- If you want to do "scripting" around the game rather check [SDK](https://github.com/SDmodding/SDK) and do everything internally yourself.
+
 ## Installation
 - Download latest release from: [Here](https://github.com/SDModding/Script-Mod/releases/latest).
 - Extract all files inside game folder.
